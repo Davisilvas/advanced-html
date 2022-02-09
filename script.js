@@ -10,7 +10,9 @@ image.addEventListener("click",function(){
 
 let lista = document.getElementById("lista");
 
-let num = parseInt(lista.getAttribute("num"));
+let num = parseInt(lista.getAttribute("data-num"));
+
+console.log(lista.dataset.num);
 
 let conteudo = " ";
 
