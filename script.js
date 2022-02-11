@@ -18,11 +18,9 @@ function aumentar_vel(){
 
 function play(){
     video.play();
-
 }
 
 function pause(){
     video.pause();
     //video.currentTime = 0;
-
 }
