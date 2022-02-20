@@ -2,21 +2,31 @@ let screen = document.getElementById("screen");
 
 let ctx = screen.getContext("2d");
 
-//CRIA UM RETÂNGULO PREENCHIDO E AZUL
-//ctx.fillStyle = "blue";
-//ctx.fillRect(10, 10, 100, 200);
+ctx.beginPath();
 
-//CRIA UM RETÂNGULO VAZIO E VERMELHO
-//ctx.strokeStyle = "red";
-//ctx.strokeRect(10, 10, 100, 200);
-
-
-//CRIANDO UM RETÂNGULO COM BORDA VERMELHA E PREENCHIMENTO AZUL!
-ctx.rect(10, 10, 100, 200);
+ctx.lineWidth = 4;
 ctx.strokeStyle = "red";
-ctx.lineWidth = 5;
-ctx.fillStyle = "blue";
-ctx.fill();
+ctx.moveTo (10, 10);
+ctx.lineTo(400, 300);
 ctx.stroke();
 
-ctx.clearRect(20, 20, 30, 30);
+ctx.beginPath();
+
+ctx.lineWidth = 7;
+ctx.strokeStyle = "purple";
+ctx.moveTo (50, 10);
+ctx.lineTo(300, 300);
+ctx.stroke();
+
+
+ctx.beginPath();
+
+ctx.lineWidth = 7;
+ctx.strokeStyle = "purple";
+ctx.fillStyle = "green";
+ctx.moveTo (50, 10);
+ctx.lineTo(300, 300);
+ctx.lineTo(200, 300);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
