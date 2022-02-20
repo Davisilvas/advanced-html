@@ -2,31 +2,15 @@ let screen = document.getElementById("screen");
 
 let ctx = screen.getContext("2d");
 
-ctx.beginPath();
-
-ctx.lineWidth = 4;
-ctx.strokeStyle = "red";
-ctx.moveTo (10, 10);
-ctx.lineTo(400, 300);
-ctx.stroke();
+let x = 250;
+let y = 250;
+let raio = 100;
+let inicio = 0;
+let fim = 2 * Math.PI;
 
 ctx.beginPath();
+ctx.strokeStyle = "brown";
 
-ctx.lineWidth = 7;
-ctx.strokeStyle = "purple";
-ctx.moveTo (50, 10);
-ctx.lineTo(300, 300);
-ctx.stroke();
+ctx.arc(x, y, raio, inicio, fim);
 
-
-ctx.beginPath();
-
-ctx.lineWidth = 7;
-ctx.strokeStyle = "purple";
-ctx.fillStyle = "green";
-ctx.moveTo (50, 10);
-ctx.lineTo(300, 300);
-ctx.lineTo(200, 300);
-ctx.closePath();
-ctx.fill();
 ctx.stroke();
