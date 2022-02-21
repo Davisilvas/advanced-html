@@ -31,7 +31,9 @@ setInterval(function(){
 
     if (circle.fim < 2 * Math.PI){
         circle.fim += 0.3;
+        //circle.x -= 3;
         circle.x += 3;
+
     }
 
     drawCircle(circle);
