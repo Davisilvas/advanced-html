@@ -2,15 +2,39 @@ let screen = document.getElementById("screen");
 
 let ctx = screen.getContext("2d");
 
-let x = 250;
-let y = 250;
-let raio = 100;
-let inicio = 0;
-let fim = 2 * Math.PI;
+let circle = {
+    x:  250,
+    y:  250,
+    raio: 100,
+    inicio: 0,
+    fim: 0 * Math.PI,
+    backwards: true,
+}
 
-ctx.beginPath();
-ctx.strokeStyle = "brown";
+function drawCircle(c){
 
-ctx.arc(x, y, raio, inicio, fim);
+    ctx.beginPath();
+    ctx.rect(0, 0, 500, 500);
+    ctx.fillStyle = "beige";
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "brown";
+    ctx.fillStyle = "blue";
+    ctx.arc(c.x, c.y, c.raio, c.inicio, c.fim, c.backwards);
+    ctx.fill();
+    ctx.stroke();
+}
 
-ctx.stroke();
+setInterval(function(){
+
+    if (circle.fim < 2 * Math.PI){
+        circle.fim += 0.3;
+        circle.x += 3;
+    }
+
+    drawCircle(circle);
+
+
+}, 30)
